@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DENSO_ORM_HHT_APP.Pages.MainPage" LayoutChanged="ContentPage_LayoutChanged" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Spacing="0" Margin="0"  BackgroundColor="Black">
+            <Grid Margin="0,10,0,0">
+                <Label Text="HOME PAGE" TextColor="Red" FontSize="35"  TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+
+            <Frame   BackgroundColor="Black" BorderColor="White" Margin="0,20,0,0"  VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  CornerRadius="20" WidthRequest="190">
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Label Text="KANBAN PROGRESS" Grid.Row="0" FontSize="20" TextColor="White"></Label>
+                    <ImageButton Grid.Column="0"  HeightRequest="85" Grid.Row="1" Source="Scanning.jpg" Aspect="Fill" Clicked="ImageButton_Clicked"  ></ImageButton>
+                    <!--<Label Grid.Row="0" FontSize="25" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblUserId" Text="User ID" BackgroundColor="White" ></Label>-->
+                </Grid>
+            </Frame>
+            <Frame   BackgroundColor="Black" BorderColor="White" Margin="0,0,0,0"  VerticalOptions="StartAndExpand" HorizontalOptions="Center"  CornerRadius="20" WidthRequest="190">
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Button Text="Line Assigning" Clicked="Button_Clicked" BackgroundColor="Teal" Grid.Row="1" TextColor="White" FontSize="20" ></Button>
+                    <!--<Label Grid.Row="0" FontSize="25" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblUserId" Text="User ID" BackgroundColor="White" ></Label>-->
+                </Grid>
+            </Frame>
+            <Grid HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <!--<RowDefinition Height="30"></RowDefinition>-->
+
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgBack"  Grid.Row="0" Grid.Column="0"  Clicked="ImgBack_Clicked"  Source="Back.jpg"  Aspect="Fill" ></ImageButton>
+                <!--<Label VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"  TextColor="White" FontSize="15" Text="BACK" Grid.Row="1" Grid.Column="0"></Label>-->
+            </Grid>
+
+            <Grid VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="Logo" Source="Logo.png"  Aspect="AspectFit" WidthRequest="200"  HeightRequest="50"  ></Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

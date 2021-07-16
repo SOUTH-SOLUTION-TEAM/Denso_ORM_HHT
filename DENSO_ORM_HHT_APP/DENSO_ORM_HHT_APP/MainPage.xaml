@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DENSO_ORM_HHT_APP"
+             x:Class="DENSO_ORM_HHT_APP.MainPage" LayoutChanged="ContentPage_LayoutChanged">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="lblName" Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>

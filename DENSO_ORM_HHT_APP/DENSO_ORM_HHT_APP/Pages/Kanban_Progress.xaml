@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DENSO_ORM_HHT_APP.Pages.Kanban_Progress" LayoutChanged="ContentPage_LayoutChanged" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Label Text="KANBAN PROGRESS" TextColor="Red" FontSize="25" Margin="0,0,0,0" TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+            <Frame   BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,20,10,0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Entry  Grid.Row="0" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="txtLineGroup" BackgroundColor="White"  Placeholder="LINE GROUP"></Entry>
+                    <Picker Grid.Row="1" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="cmbLineName" BackgroundColor="White" Title="SELECT LINE NAME." SelectedIndexChanged="CmbLineName_SelectedIndexChanged"></Picker>
+                    <Picker  Grid.Row="2" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="cmbModelName" BackgroundColor="White" Title="SELECT MODEL NO." SelectedIndexChanged="CmbModelName_SelectedIndexChanged"></Picker>
+                    <Picker Grid.Row="3" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="cmbChangeOver" BackgroundColor="White" Title="SELECT CHANGE OVER."></Picker>
+                </Grid>
+
+            </Frame>
+            <Frame   BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,0,10,0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Entry Grid.Row="0" Completed="TxtSending_Completed" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="txtSending" BackgroundColor="White" Placeholder="SCAN KANBAN."></Entry>
+                    <Label Grid.Row="1" FontSize="25" TextColor="DarkOrange" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblSentCount" Text="NO OF KANBAN = 0" BackgroundColor="White" ></Label>
+                    <Label Grid.Row="2" FontSize="25" TextColor="Maroon" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblQty" Text="KANBAN TOTAL QTY = 0" BackgroundColor="White" ></Label>
+
+                </Grid>
+            </Frame>
+            <Grid HorizontalOptions="Center" VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgSave" Grid.Row="0" Grid.Column="0"   Clicked="ImgSave_Clicked"  Source="Save.jpg" Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgBack"  Grid.Row="0" Grid.Column="2"  Clicked="ImgBack_Clicked"  Source="Back.jpg"  Aspect="Fill" ></ImageButton>
+            </Grid>
+
+            <Grid VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="Logo" Source="Logo.png"  Aspect="AspectFit" WidthRequest="200"  HeightRequest="50"  ></Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

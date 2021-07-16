@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DENSO_ORM_HHT_APP.Pages.LineAsign"  LayoutChanged="ContentPage_LayoutChanged"  BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Text="LINES ASSIGNING"  TextColor="Red" FontSize="25" Margin="0,0,0,0" TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+            <Frame   BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,30,10,0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Picker SelectedIndexChanged="CmbLineGroup_SelectedIndexChanged" Grid.Row="0" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="cmbLineGroup" BackgroundColor="White"  Title="SELECT LINE GROUP."></Picker>
+                 </Grid>
+
+            </Frame>
+            <Frame   BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,0,10,10">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ListView   BackgroundColor="White" x:Name="ListTag" Header="" HasUnevenRows="True">
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="5">
+                                        <Label FontAttributes="Bold" TextColor="Blue" Text="SELECT" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                                        <Label FontAttributes="Bold" TextColor="Blue" Text="LINE NAME" VerticalOptions="Center" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                    <BoxView Color="Navy" HeightRequest="1" HorizontalOptions="Fill"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" Padding="5">
+                                        <Switch x:Name="Swicthtag"  IsToggled="{Binding Selected,  Mode=TwoWay}"  VerticalOptions="Center" HorizontalOptions="StartAndExpand"  />
+                                        <Label  x:Name="lblLineNmae" FontAttributes="Bold" TextColor="Black" Text="{Binding LineName , Mode=OneWay}" VerticalOptions="Center" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+                
+            </Frame>
+            <Grid HorizontalOptions="Center" VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgSave" Grid.Row="0" Grid.Column="0"   Clicked="ImgSave_Clicked"  Source="Save.jpg" Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgBack"  Grid.Row="0" Grid.Column="2"  Clicked="ImgBack_Clicked"  Source="Back.jpg"  Aspect="Fill" ></ImageButton>
+            </Grid>
+
+            <Grid VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="Logo" Source="Logo.png"  Aspect="AspectFit" WidthRequest="200"  HeightRequest="50"  ></Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DENSO_ORM_HHT_APP.Pages.Login"  LayoutChanged="ContentPage_LayoutChanged" BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Spacing="0" Margin="0"  BackgroundColor="Black">
+            <Grid VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                <Image  x:Name="DensoLogo" Source="DensoLogo.png"  Aspect="AspectFit" WidthRequest="200"  HeightRequest="50"  ></Image>
+            </Grid>
+            <Grid Margin="0,40,0,0">
+                <Label x:Name="lblLogin" Text="LOGIN" TextColor="White" FontSize="35"  TextDecorations="Underline" FontAttributes="Bold"  VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+
+            <Frame   BackgroundColor="White" BorderColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="10,70,10,0">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <!--<RowDefinition></RowDefinition>-->
+                        <RowDefinition></RowDefinition>
+                        <!--<RowDefinition></RowDefinition>-->
+                    </Grid.RowDefinitions>
+                    <Entry Grid.Row="0"  TextColor="Black" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="txtUserID" BackgroundColor="White" Placeholder="USER ID."></Entry>
+                    <Entry IsPassword="True" Grid.Row="1" Completed="TxtPassowrd_Completed" TextColor="Black" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="txtPassowrd" BackgroundColor="White" Placeholder="PASSWORD."></Entry>
+                    <!--<Label Grid.Row="0" FontSize="25" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblUserId" Text="User ID" BackgroundColor="White" ></Label>-->
+                    <!--<Label Grid.Row="2" FontSize="25" TextColor="Blue" FontAttributes="Bold"  VerticalOptions="StartAndExpand"  x:Name="lblPassword" Text="Password" BackgroundColor="White" ></Label>-->
+                </Grid>
+            </Frame>
+            <Grid HorizontalOptions="Center" VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="imgLogin" Grid.Row="0" Grid.Column="0"   Clicked="ImgLogin_Clicked"  Source="Login.jpg" Aspect="Fill" ></ImageButton>
+                <ImageButton x:Name="imgExit"  Grid.Row="0" Grid.Column="2"  Clicked="ImgExit_Clicked"  Source="Exit.jpg"  Aspect="Fill" ></ImageButton>
+            </Grid>
+
+            <Grid VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0">
+                <Image  x:Name="Logo" Source="Logo.png"  Aspect="AspectFit" WidthRequest="200"  HeightRequest="50"  ></Image>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

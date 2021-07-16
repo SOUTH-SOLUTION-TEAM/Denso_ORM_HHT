@@ -1,0 +1,5 @@
+MONO_DEBUG=gen-compact-seq-points
+XAMARIN_BUILD_ID=33162a2d-8437-4397-b1f3-14d75ebde435
+XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
+XA_TLS_PROVIDER=btls
+MONO_GC_PARAMS=major=marksweep
